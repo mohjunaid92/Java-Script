@@ -82,9 +82,19 @@ let junaid = {
 console.log("junaid");
 console.log("junaid");
 console.log("junaid");
-console.log(a);
+try {
+    console.log(a);
+
+} catch (err) {
+    console.log("Error has been caught");
+    console.log(err);
+    
+    
+}
 
 
+
 console.log("junaid");
 console.log("junaid");
 console.log("junaid");
+
