@@ -4,3 +4,10 @@ div{
     border: 2px solid black;
     background-color: red;
 }
+ul {
+    background-color: yellow;
+
+}
+li {
+    background-color: pink;
+}
