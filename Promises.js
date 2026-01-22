@@ -1,4 +1,3 @@
-
 let h1 = document.querySelector("h1");
 
 function colorChange(color, chnageColor, delay){
@@ -61,6 +60,12 @@ setTimeout(() => {
 }, 1000);
 
 
-
-
+let promise = new Promise((resolve,reject) => {
+    let dataSpeed = Math.floor(Math.random()*10)+1;
+    if( dataSpeed > 5){
+        console.log("Data saved");
+    } else {
+        console.log("data was not saved");
+    }
+});
 
