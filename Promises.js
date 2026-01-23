@@ -60,27 +60,27 @@ function savetoDb(data, success, failure){
 
 }
 
-savetoDb(
-    "Moh junaid", 
-   ()=> {
-    console.log("Your data was saved");
-    savetoDb(
-        "moh junaid"
-        ,
-        ()=> {
-            console.log("second data was saved");
+savedData("junaid", 
+        ()=>{
+            console.log("data 1 is saved");
+            savedData(" moh junaid",
+            ()=> {
+                console.log("data 2 was saved");
+                savedData("saiju",
+                ()=>{
+                    console.log("data 3 was saved");
+                },
+                 ()=>{
+                    console.log("data 3 was not saved");
+                })
+            },
+             ()=> {
+                console.log("data 2 was not saved");
+            })
         },
         ()=> {
-            console.log("second data was not saved");
-            savetoDb("new data", ()=> { console.log("3rd data was saved");
-         }, ()=> {
-                console.log("your data was not saved");
-            })
-        })
-},
-()=> {
-    console.log("weak connection data was not saved");
-});
+            console.log("data 1 was not saved");
+        });
 
 
 //Promises
