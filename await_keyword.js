@@ -31,11 +31,16 @@ function changeColor(data, delay){
 }
 
 async function call(data, delay){
-    await changeColor("blue",1000);
+   try {
+     await changeColor("blue",1000);
     await changeColor("red",1000);
     await changeColor("yellow",1000);
     await changeColor("pink",1000);
     await changeColor("orange",1000);
+   } catch(err){
+    console.log(err);
+    console.log("error occur");
+   }
    return new Promise((resolve, reject) => {
        setTimeout((()=>{
         h1.style.color = data;
@@ -52,4 +57,6 @@ call("green",1000)
 .catch((error)=>{
     console.log(error);
     console.log("erroe")
-})
+});
+
+// Api's
