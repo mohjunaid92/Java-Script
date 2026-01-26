@@ -3,7 +3,7 @@ async function namew(data){
 }
 namew("junaid")
 .then((result)=> {
-    sjs
+    
     console.log(result);
     console.log("asynchronous code");
     
@@ -15,5 +15,5 @@ namew("junaid")
 console.log(" 1  synchronous code");
 
 for(i = 0; i< 10; i++){
-    console.log(i);
+    console.log(i)
 }
